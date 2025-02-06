@@ -1,15 +1,15 @@
 import React from "react";
 
-const TodoList = ({ todos, onClickComplete }) => {
+const TodoList = ({ todos, handleComplete }) => {
   return (
     <div>
       <h2>Child Component</h2>
       <ul>
-        {todos.map((t, inx) => (
-          <li key={inx}>
+        {todos.map((t) => (
+          <li key={t.id}>
             {t.text}
             {!t.completed && (
-              <button onClick={() => onClickComplete(t.id)}>Complete</button>
+              <button onClick={() => handleComplete(t.id)}>Complete</button>
             )}
           </li>
         ))}
@@ -17,4 +17,5 @@ const TodoList = ({ todos, onClickComplete }) => {
     </div>
   );
 };
+
 export default TodoList;

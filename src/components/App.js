@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./../styles/App.css";
-import TodoList from "./TodoList";
+import "../styles/App.css";
+import TodoList from "./ToDoList"; 
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div>
       <h1>Parent Component</h1>
-      <TodoList todos={todos} onClickComplete={handleComplete} />
+      <TodoList todos={todos} handleComplete={handleComplete} /> 
     </div>
   );
 };
